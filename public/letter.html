@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111119">
+  <title>نامه‌ای برای تو | ABT Letter</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="received-letter-page">
+
+  <header class="site-header">
+    <a href="/" class="logo">
+      <span class="logo-icon">✉</span>
+      <span>ABT <span class="logo-accent">Letter</span></span>
+    </a>
+    <a href="/create.html" class="header-button">ساخت نامه خودم ↗</a>
+  </header>
+
+  <main class="received-container">
+    <div id="letter-loading" class="letter-status">
+      <span class="loading-spinner"></span>
+      <p>در حال آماده کردن نامه تو...</p>
+    </div>
+
+    <section id="letter-result" hidden>
+      <div class="received-heading">
+        <span class="section-kicker">A SPECIAL MESSAGE FOR YOU</span>
+        <h1 id="received-greeting">یک نامه برای تو</h1>
+        <p>کسی برایت چند خط نوشته است.</p>
+      </div>
+
+      <div class="opening-stage">
+        <button type="button" id="open-letter" class="opening-envelope"
+          aria-label="باز کردن نامه">
+          <span class="opening-envelope-back"></span>
+          <span class="opening-envelope-paper">✉</span>
+          <span class="opening-envelope-flap"></span>
+          <span class="opening-envelope-front"></span>
+          <span class="opening-envelope-seal">♥</span>
+        </button>
+        <p id="opening-hint">برای باز کردن نامه روی پاکت بزن</p>
+      </div>
+
+      <article id="received-paper" class="received-paper" hidden>
+        <div class="received-paper-decoration">✦</div>
+        <p id="received-to" class="received-to"></p>
+        <h2 id="received-title"></h2>
+        <div id="received-message" class="received-message"></div>
+        <div class="received-signature">
+          <span>با مهر،</span>
+          <strong id="received-sender"></strong>
+        </div>
+        <div class="received-paper-decoration bottom">✧</div>
+      </article>
+
+      <div id="received-actions" class="received-actions" hidden>
+        <button type="button" id="copy-letter-link" class="secondary-button">
+          کپی لینک نامه
+        </button>
+        <a href="/create.html" class="primary-button">ساخت نامه خودم ↗</a>
+        <p id="copy-status" role="status"></p>
+      </div>
+    </section>
+
+    <section id="letter-error" class="letter-error" hidden>
+      <div class="error-icon">✉</div>
+      <h1>نامه پیدا نشد</h1>
+      <p id="letter-error-message">ممکن است لینک اشتباه باشد یا نامه در دسترس نباشد.</p>
+      <a href="/" class="primary-button">بازگشت به صفحه اصلی</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="/" class="logo footer-logo">
+      <span class="logo-icon">✉</span>
+      <span>ABT <span class="logo-accent">Letter</span></span>
+    </a>
+    <p>بعضی حرف‌ها ارزش یک نامه را دارند.</p>
+    <span class="footer-copy">© ABT Letter</span>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>

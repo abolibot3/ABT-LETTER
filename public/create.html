@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111119">
+  <title>ساخت نامه | ABT Letter</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="editor-page">
+
+  <header class="site-header">
+    <a href="/" class="logo">
+      <span class="logo-icon">✉</span>
+      <span>ABT <span class="logo-accent">Letter</span></span>
+    </a>
+    <a href="/" class="header-button">← بازگشت به خانه</a>
+  </header>
+
+  <main class="editor-container">
+    <div class="editor-heading">
+      <span class="section-kicker">CREATE YOUR LETTER</span>
+      <h1>نامه‌ات را بساز.</h1>
+      <p>حرف‌هایت را بنویس و ظاهر نامه را مطابق سلیقه‌ات تغییر بده.</p>
+    </div>
+
+    <div class="editor-layout">
+
+      <section class="editor-panel">
+        <form id="letter-form">
+
+          <div class="form-section">
+            <h2><span>01</span> نوع نامه</h2>
+            <label for="letter-type">قالب نامه</label>
+            <select id="letter-type" name="type">
+              <option value="love">نامه عاشقانه</option>
+              <option value="classic">نامه کلاسیک</option>
+              <option value="gift">هدیه و تبریک</option>
+              <option value="invite">دعوت‌نامه</option>
+              <option value="thanks">نامه تشکر</option>
+              <option value="apology">نامه عذرخواهی</option>
+            </select>
+          </div>
+
+          <div class="form-section">
+            <h2><span>02</span> مشخصات نامه</h2>
+
+            <div class="field-group">
+              <label for="sender">نام فرستنده</label>
+              <input id="sender" name="sender" type="text"
+                maxlength="60" placeholder="نامه از طرف چه کسی است؟" required>
+            </div>
+
+            <div class="field-group">
+              <label for="receiver">نام گیرنده</label>
+              <input id="receiver" name="receiver" type="text"
+                maxlength="60" placeholder="نامه برای چه کسی است؟" required>
+            </div>
+
+            <div class="field-group">
+              <label for="letter-title">عنوان نامه <span>(اختیاری)</span></label>
+              <input id="letter-title" name="title" type="text"
+                maxlength="100" placeholder="مثلاً چند حرف از دلم">
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2><span>03</span> متن نامه</h2>
+
+            <div class="field-group">
+              <label for="message">حرف‌هایت را اینجا بنویس</label>
+              <textarea id="message" name="message" rows="8"
+                maxlength="5000" placeholder="سلام...\n\nمدت‌ها بود می‌خواستم این حرف‌ها را برایت بنویسم..."
+                required></textarea>
+              <div class="character-count">
+                <span id="char-count">0</span> / 5000 کاراکتر
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2><span>04</span> ظاهر نامه</h2>
+
+            <div class="field-group">
+              <label for="paper-style">جنس و سبک کاغذ</label>
+              
+<select id="paper-style" name="paperStyle">
+  <option value="cream">کاغذ کرم کلاسیک</option>
+  <option value="white">کاغذ سفید ساده</option>
+  <option value="vintage">کاغذ قدیمی و نوستالژیک</option>
+  <option value="pink">کاغذ صورتی</option>
+  <option value="dark">کاغذ تیره</option>
+  <option value="royal">قالب سلطنتی طلایی</option>
+  <option value="minimal">قالب مینیمال</option>
+  <option value="persian">قالب سنتی ایرانی</option>
+  <option value="romantic">🌹 رمانتیک و گل‌دار</option>
+  <option value="blackgold">🖤 مشکی و طلایی لوکس</option>
+  <option value="antique">📜 آنتیک و قدیمی</option>
+<option value="iranian">🕌 سنتی ایرانی</option>
+<option value="floral">🌿 گل و طبیعت</option>
+<option value="silver">🌙 سرمه‌ای و نقره‌ای</option>
+<option value="luxury">✨ مینیمال لوکس</option>
+<option value="lavender">💜 یاسی و بنفش</option>
+</select>
+
+<div class="ready-templates">
+  <div class="templates-heading">
+    <h3>✨ قالب‌های آماده</h3>
+    <p>یک طرح انتخاب کن تا نامه‌ات سریع‌تر آماده شود.</p>
+  </div>
+
+  <div class="template-grid">
+    <button type="button" class="template-card" data-template="love">
+      <span class="template-icon">💌</span>
+      <strong>عاشقانه</strong>
+      <small>لطیف و احساسی</small>
+    </button>
+
+    <button type="button" class="template-card" data-template="birthday">
+      <span class="template-icon">🎂</span>
+      <strong>تبریک تولد</strong>
+      <small>شاد و رنگارنگ</small>
+    </button>
+
+    <button type="button" class="template-card" data-template="thanks">
+      <span class="template-icon">🌟</span>
+      <strong>تشکر</strong>
+      <small>صمیمی و دلنشین</small>
+    </button>
+
+    <button type="button" class="template-card" data-template="apology">
+      <span class="template-icon">🌷</span>
+      <strong>عذرخواهی</strong>
+      <small>آرام و دوستانه</small>
+    </button>
+
+    <button type="button" class="template-card" data-template="invite">
+      <span class="template-icon">✉️</span>
+      <strong>دعوت‌نامه</strong>
+      <small>خاص و زیبا</small>
+    </button>
+
+    <button type="button" class="template-card" data-template="classic">
+      <span class="template-icon">🖋️</span>
+      <strong>کلاسیک</strong>
+      <small>ساده و رسمی</small>
+    </button>
+  </div>
+
+  <p class="template-status" aria-live="polite">
+    هنوز قالبی انتخاب نکرده‌ای.
+  </p>
+</div>
+
+            </div>
+
+            <div class="field-group">
+              <label for="font-style">فونت نامه</label>
+              
+<select id="font-style" name="fontStyle">
+  <option value="vazirmatn">وزیرمتن ـ مدرن و خوانا</option>
+  <option value="serif">فونت کلاسیک</option>
+  <option value="handwritten">فونت دست‌نویس</option>
+  <option value="nastaliq">نستعلیق ـ هنری و سنتی</option>
+  <option value="amiri">امیری ـ کلاسیک</option>
+</select>
+
+            </div>
+
+            <div class="field-group">
+              <label for="text-color">رنگ نوشته</label>
+              <div class="color-field">
+                <input id="text-color" name="textColor" type="color" value="#40352f">
+                <span id="color-value">#40352F</span>
+              </div>
+            </div>
+          </div>
+
+          
+<!-- تنظیمات پیشرفته ظاهر نامه -->
+<section class="customization-section">
+  <h3>🎨 شخصی‌سازی ظاهر نامه</h3>
+  <p>تغییرات را زنده در پیش‌نمایش ببین.</p>
+
+  <label for="border-style">طرح قاب</label>
+  <select id="border-style" name="borderStyle">
+    <option value="none">بدون قاب</option>
+    <option value="solid" selected>ساده</option>
+    <option value="double">دوخطی</option>
+    <option value="dashed">خط‌چین</option>
+    <option value="dotted">نقطه‌ای</option>
+    <option value="ornate">تزئینی</option>
+  </select>
+
+  <label for="border-color">رنگ قاب</label>
+  <input id="border-color" type="color" value="#b68b55">
+
+  <label for="border-width">ضخامت قاب</label>
+  <input id="border-width" type="range" min="1" max="8" value="2">
+  <output id="border-width-value">۲ پیکسل</output>
+
+  <label for="corner-style">گوشه‌های کاغذ</label>
+  <select id="corner-style">
+    <option value="sharp">تیز</option>
+    <option value="soft" selected>کمی گرد</option>
+    <option value="round">کاملاً گرد</option>
+  </select>
+
+  <label for="shadow-style">سایه کاغذ</label>
+  <select id="shadow-style">
+    <option value="none">بدون سایه</option>
+    <option value="soft" selected>ملایم</option>
+    <option value="strong">پررنگ</option>
+  </select>
+
+  <label for="decoration-style">تزئینات نامه</label>
+  <select id="decoration-style">
+    <option value="classic">ستاره</option>
+    <option value="heart">قلب</option>
+    <option value="flower">گل</option>
+    <option value="gold">طلایی</option>
+    <option value="none">بدون تزئین</option>
+  </select>
+
+  <label for="font-size">اندازه نوشته</label>
+  <input id="font-size" type="range" min="14" max="24" value="17">
+  <output id="font-size-value">۱۷ پیکسل</output>
+
+  <label for="line-height">فاصله خطوط</label>
+  <input id="line-height" type="range" min="15" max="25" value="21">
+  <output id="line-height-value">۲٫۱</output>
+
+  <button type="button" id="reset-customization">
+    بازگرداندن تنظیمات پیش‌فرض
+  </button>
+</section>
+
+
+          <div id="form-error" class="form-error" role="alert" hidden></div>
+
+          <button class="primary-button submit-letter" type="submit">
+            آماده‌سازی نامه <span>←</span>
+          </button>
+          <p class="editor-hint">در این مرحله فقط پیش‌نمایش ساخته می‌شود؛ لینک اختصاصی را در مرحله بعد اضافه می‌کنیم.</p>
+
+        </form>
+      </section>
+
+      <aside class="preview-panel">
+        <div class="preview-header">
+          <span class="preview-indicator"></span>
+          پیش‌نمایش زنده
+          <span class="preview-label">LIVE</span>
+        </div>
+
+        <div class="preview-stage">
+          <div class="preview-envelope">
+            <div class="preview-envelope-flap"></div>
+            <div class="preview-envelope-seal">✉</div>
+          </div>
+
+          <article class="letter-paper cream" id="letter-preview">
+            <div class="preview-top-decoration">✦</div>
+            <div class="preview-to" id="preview-to">برای گیرنده عزیز</div>
+            <h2 id="preview-title">عنوان نامه</h2>
+            <div class="preview-message" id="preview-message">متن نامه‌ات اینجا نمایش داده می‌شود...</div>
+            <div class="preview-signature">
+              <span>با مهر،</span>
+              <strong id="preview-sender">نام فرستنده</strong>
+            </div>
+            <div class="preview-bottom-decoration">✧</div>
+          </article>
+        </div>
+
+        <p class="preview-footnote">پیش‌نمایش تقریبی است؛ انیمیشن نهایی هنگام باز کردن لینک نمایش داده می‌شود.</p>
+      </aside>
+
+    </div>
+  </main>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
